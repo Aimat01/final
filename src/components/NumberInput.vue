@@ -1,5 +1,5 @@
 <template>
-    <div class="containerNumber">
+    <div class="block">
         <input type="text" class="text" placeholder="Number" v-model="number" @blur="interated=true">
         <!-- Call the validation function on input change -->
         <span v-if="invalidInput" class="error-text">Invalid number</span>
@@ -25,16 +25,12 @@ export default {
 </script>
 
 <style>
-.containerNumber {
-    display: grid;
-    justify-content: center;
-    padding-top: 40px;
-}
 
 .text {
     width: 40vh;
     padding: 7px;
-    border-radius: 5px;
+    border:none;
+    outline: none;
 }
 
 .error-text {

@@ -1,10 +1,9 @@
 <template>
-  <div class="container">
-    <div class="card">
-      <img :src="src" alt="Card Image" class="card-image">
-      <div class="card-body">
-        Aimat Kulmakhan
-      </div>
+  <div class="card">
+    <img :src="src" :alt="altText" class="card-image">
+    <div class="card-content">
+      <h2 class="card-title">{{ title }}</h2>
+      <p class="card-text">{{ content }}</p>
     </div>
   </div>
 </template>
@@ -14,42 +13,45 @@ export default {
   props: {
     src: {
       type: String,
-      required: true
-    }
-  }
-}
+      required: true,
+    },
+    altText: {
+      type: String,
+      default: 'Card Image',
+    },
+    title: {
+      type: String,
+      required: true,
+    },
+    content: {
+      type: String,
+      default: '',
+    },
+  },
+};
 </script>
 
-<style>
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 40px;
-}
-
+<style scoped>
 .card {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-  display: grid;
-  justify-content: center;
-}
-
-.card-image {
-  width: 100%;
-  height: auto;
-}
-
-.card-body {
-  padding: 10px;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+.card-image {
+  width: 20%;
+  height: 40px;
+  display: block;
 }
 
-.card img{
-  width: 300px;
+.card-title {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: #333;
+}
+
+.card-text {
+  color: #666;
+  font-size: 10px;
 }
 </style>

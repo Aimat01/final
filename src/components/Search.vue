@@ -23,6 +23,7 @@
     display: flex;
     align-items: center;
     padding: 10px;
+    margin-top: -35px;
     border-radius: 4px;
   }
   

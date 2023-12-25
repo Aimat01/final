@@ -1,7 +1,5 @@
 <template>
-    <div class="container">
-        <input type="datetime-local" class="text" placeholder="Name" v-model="name">
-    </div>
+    <input type="datetime-local" class="text" placeholder="Name" v-model="name">
 </template>
 
 <script>
@@ -29,15 +27,9 @@ export default {
 </script>
 
 <style>
-.container {
-    display: flex;
-    justify-content: center;
-    padding-top: 40px;
-}
 
 .text {
-    width: 40vh;
-    padding: 7px;
-    border-radius: 5px;
+    border: none;
+    outline: none;
 }
 </style>

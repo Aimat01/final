@@ -1,7 +1,7 @@
 <template>
   <div :style="circleStyle">
     <div class="circle__text">
-      <Text :content="content" color="blue" fontSize="18px"></Text>
+      <Text :content="content" color="black" fontSize="12px"></Text>
     </div>
   </div>
 </template>
@@ -22,6 +22,14 @@ export default {
     content: {
       type: String,
       required: true
+    },
+    background: {
+      type: String,
+      default: '#ebebeb'  // Set default background to gray
+    },
+    fontSize: {
+      type: String,
+      default: '18px'
     }
   },
   computed: {
@@ -30,21 +38,22 @@ export default {
         width: this.size,
         height: this.size,
         borderRadius: '50%',
-        border: '6px ' + this.color + ' solid'
+        background: this.background  // Set background color from props
       };
     }
   },
-  components:{
+  components: {
     Text
   }
 }
 </script>
 
 <style scoped>
-.circle__text{
+.circle__text {
   display: flex;
   justify-content: center;
-  padding-top: 18px;
+  text-align: center;
+  padding-left: 1px;
 }
 /* Add any additional styling here if necessary */
 </style>

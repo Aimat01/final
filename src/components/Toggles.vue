@@ -1,5 +1,5 @@
 <template>
-    <div class="containerCheck">
+    <div class="containerToggles">
         <label class="switch">
             <input type="checkBox" v-model="isChecked" @change="toggleSwitch">
             <span class="slider"></span>
@@ -22,10 +22,9 @@ export default {
 </script>
 
 <style>
-.containerCheck {
-    display: grid;
-    justify-content: center;
-    padding-top: 40px;
+
+.containerToggles{
+    padding-top: 20px;
 }
 
 .switch {

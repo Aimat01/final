@@ -4,8 +4,8 @@
           <h3>Zomur</h3>
           <h5>Menu</h5>
           <div class="header__birge">
-            <Icons src="https://cdn-user-icons.flaticon.com/123098/123098580/1703435073079.svg?token=exp=1703435973~hmac=545f8b799349670a373f4b30388ba340"></Icons>
-            <DropButton :options="dropdownOptions" @selected="handleSelected" initialText="Dashboard" initialColor="#007bff"></DropButton>
+            <Icons src="https://cdn-icons-png.flaticon.com/128/1946/1946488.png"></Icons>
+            <a href="../../index.html"><DropButton :options="dropdownOptions" @selected="handleSelected" initialText="Dashboard"></DropButton></a>
           </div>
           <div class="header__birge">
             <Icons src="https://cdn-icons-png.flaticon.com/128/7327/7327006.png"></Icons>
@@ -28,8 +28,8 @@
             <Button title="Inbox"></Button>
           </div>
           <div class="header__birge">
-            <Icons src="https://cdn-icons-png.flaticon.com/128/7268/7268615.png"></Icons>
-            <a href="../../index2.html"><DropButton :options="dropdownOptions" @selected="handleSelected" initialText="External"></DropButton></a>
+            <Icons src="https://cdn-user-icons.flaticon.com/123098/123098580/1703462841044.svg?token=exp=1703463741~hmac=e4359ae34d93d51d63bf747dad4677a5"></Icons>
+            <a href="../../index2.html"><DropButton :options="dropdownOptions" @selected="handleSelected" initialText="External" initialColor="#007bff"></DropButton></a>
           </div>
           <div class="header__birge">
             <Icons src="https://cdn-icons-png.flaticon.com/128/5956/5956597.png"></Icons>

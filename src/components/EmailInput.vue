@@ -1,5 +1,5 @@
 <template>
-    <div class="containerEmail">
+    <div class="block">
         <input type="email" class="text" placeholder="Email" v-model="email" @blur="interacted=true">
         <span v-if="isInvalidEmail" class="error-text">Invalid email format</span>
     </div>
@@ -24,21 +24,20 @@ export default {
 </script>
 
 <style>
-.containerEmail {
-    display: grid;
-    justify-content: center;
-    padding-top: 40px;
-}
 
 .text {
     width: 40vh;
     padding: 7px;
-    border-radius: 5px;
+    border:none;
+    outline: none;
 }
 
 .error-text {
     color: red;
     margin-left: 10px;
     /* Add some spacing to the left of the text */
+}
+.block{
+    display: grid;
 }
 </style>

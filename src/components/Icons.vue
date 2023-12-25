@@ -1,6 +1,6 @@
 <template>
   <div class="icons">
-    <img :src="src" :alt="altText" :title="titleText"/>
+    <img :src="src" :alt="altText" :title="titleText" :width="size" :height="size1"/>
   </div>
 </template>
 
@@ -22,7 +22,11 @@ export default {
     },
     size:{
       type: String,
-      default: '30px'
+      default: '17px'
+    },
+    size1:{
+      type: String,
+      default: '17px'
     }
   }
 };
@@ -30,10 +34,6 @@ export default {
 
 <style scoped>
 /* Add any custom styles here if needed */
-img{
-  width: 17px;
-  height: 17px;
-}
 .icons{
   padding-top: 7px;
 }

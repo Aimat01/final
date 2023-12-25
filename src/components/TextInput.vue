@@ -1,5 +1,5 @@
 <template>
-    <div class="containerText">
+    <div class="block">
         <input type="text" class="text" placeholder="Name" v-model="name" @blur="interacted = true">
          <!-- Update the interacted state on blur -->
         <span v-if="showError" class="error-text">require</span>
@@ -23,16 +23,12 @@ export default {
 </script>
 
 <style>
-.containerText {
-    display: grid;
-    justify-content: center;
-    padding-top: 40px;
-}
 
 .text {
     width: 40vh;
     padding: 7px;
-    border-radius: 5px;
+    border:none;
+    outline: none;
 }
 
 .error-text {

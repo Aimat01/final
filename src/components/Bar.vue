@@ -10,6 +10,7 @@
           <Text content="$25,463.00" color="white" fontSize="19px" fontWeight="bold"></Text>
         </div>
         <div class="text__info-percent">
+          <Icons src="https://cdn-user-icons.flaticon.com/123098/123098580/1703434379375.svg?token=exp=1703435287~hmac=bb5cf56f99cddd2fd6c2f9409cb52171" size="12px" size1="12px"></Icons>
           <Text content="+2.5%" color="white"></Text>
         </div>
       </div>
@@ -24,6 +25,7 @@
 <script>
 import Text from './Text.vue';
 import Button from './Button.vue'
+import Icons from './Icons.vue';
 
 export default {
   props: {
@@ -52,7 +54,8 @@ export default {
   },
   components:{
     Text,
-    Button
+    Button,
+    Icons
   }
 }
 </script>

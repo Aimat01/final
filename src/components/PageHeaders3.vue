@@ -4,12 +4,12 @@
           <h3>Zomur</h3>
           <h5>Menu</h5>
           <div class="header__birge">
-            <Icons src="https://cdn-user-icons.flaticon.com/123098/123098580/1703435073079.svg?token=exp=1703435973~hmac=545f8b799349670a373f4b30388ba340"></Icons>
-            <DropButton :options="dropdownOptions" @selected="handleSelected" initialText="Dashboard" initialColor="#007bff"></DropButton>
+            <Icons src="https://cdn-icons-png.flaticon.com/128/1946/1946488.png"></Icons>
+            <a href="../../index.html"><DropButton :options="dropdownOptions" @selected="handleSelected" initialText="Dashboard"></DropButton></a>
           </div>
           <div class="header__birge">
-            <Icons src="https://cdn-icons-png.flaticon.com/128/7327/7327006.png"></Icons>
-            <a href="../../index3.html"><Button title="Transaction"></Button></a>
+            <Icons src="https://cdn-user-icons.flaticon.com/123098/123098580/1703472875321.svg?token=exp=1703473776~hmac=c5f18859d08bb52550c62a2a32e9fac5"></Icons>
+            <Button title="Transaction" color="#007bff"></Button>
           </div>
           <div class="header__birge">
             <Icons src="https://cdn-icons-png.flaticon.com/128/2169/2169864.png"></Icons>

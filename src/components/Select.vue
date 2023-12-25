@@ -1,32 +1,49 @@
 <template>
-    <div class="container">
-        <select v-model="select">
-            <option v-for="select in selects">{{ select }}</option>
-        </select>
-    </div>
-</template>
-
-<script>
-    export default{
-        data(){
-            return{
-                select: '',
-                selects:['Kazakhstan', 'Uzbekistan', 'South Korea', 'Germany']
-            }
-        }
+    <select v-model="selectedValue" @change="handleChange">
+      <option value="" disabled selected>{{ text }}</option> <!-- Default text -->
+      <option v-for="option in options" :key="option.value" :value="option.value">
+        {{ option.label }}
+      </option>
+    </select>
+  </template>
+  
+  <script>
+  export default {
+    props: {
+      options: {
+        type: Array,
+        required: true,
+        default: () => []
+      },
+      value: {
+        type: [String, Number],
+        default: ''
+      },
+      text:{
+        type: String,  
+      }
+    },
+    data() {
+      return {
+        selectedValue: this.value
+      };
+    },
+    watch: {
+      value(newVal) {
+        this.selectedValue = newVal;
+      }
+    },
+    methods: {
+      handleChange(event) {
+        this.$emit('update:value', event.target.value);
+      }
     }
-</script>
-
-
-<style>
-    .container{
-        display: flex;
-        justify-content: center;
-        padding-top: 40px;
-    }
-    .text{
-        width: 40vh;
-        padding: 7px;
-        border-radius: 5px;
-    }
+  };
+  </script>
+  
+  <style>
+  select{
+    border: none;
+    font-weight: 700;
+  }
 </style>

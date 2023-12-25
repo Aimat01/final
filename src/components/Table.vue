@@ -73,7 +73,7 @@ margin-top: 20px;
 
 th, td {
 border: none;
-padding: 16px;
+padding: 16px 50px;
 text-align: left;
 }
 
